@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <button onclick="getData()">클릭</button>
+    <div id="content"></div>
+    <script>
+      function getData() {
+        fetch("https://jsonplaceholder.typicode.com/todos")
+        .then(response => response.json())
+        .then(data => {
+          const userInfo = document.createElement("div");
+          userInfo.textContent = data.map((user) => user.userid + user.id + user.title + user.completed);
+          content.appendChild(userInfo);
+        })
+        .catch(error => console.log("fetch 에러!"));
+      }
+    </script>
+  </body>
+</html>
