@@ -1,18 +1,36 @@
 <html>
   <body>
     <button onclick="getData()">클릭</button>
-    <div id="content"></div>
+    <div id="content", onclick="printinfo()"></div>
     <script>
       function getData() {
+          //userid id title completed
         fetch("https://jsonplaceholder.typicode.com/todos")
-        .then(response => response.json())
+        .then(res => res.json())
         .then(data => {
-          const userInfo = document.createElement("div");
-          userInfo.textContent = data.map((user) => user.userid + user.id + user.title + user.completed);
-          content.appendChild(userInfo);
+          for(i=0;i<10;i++) {
+            const userid = document.createElement("div");
+            const id = document.createElement("div");
+            const title = document.createElement("div");
+            const completed = document.createElement("div");
+            userid.textContent = data[i].userid;
+            id.textContent = data[i].id;
+            title.textContent = data[i].title;
+            completed.textContent = data[i].completed;
+            const content = document.getElementById("content");
+            content.appendChild(userid);
+            content.appendChild(id);
+            content.appendChild(title);
+            content.appendChild(completed);
+
+            function printinfo() {
+              console.log(title);
+            }
+          }
         })
         .catch(error => console.log("fetch 에러!"));
       }
+      
     </script>
   </body>
 </html>
