@@ -32,8 +32,8 @@
 
  먼저 커밋 메시지는 **제목, 본문, 꼬리말** 세 가지 파트로 나누고, 각 파트는 빈 줄을 두어서 구분한다.
 
-> type:subject
-body
+> type:subject  
+body  
 footer
 > 
 - type : 어떤 의도로 커밋했는지를 type에 명시
