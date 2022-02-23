@@ -1,0 +1,23 @@
+<html>
+  <body>
+    <button onclick="getData()">클릭</button>
+    <div id="title">Title</div>
+  <ul>
+  </ul>
+  <script>
+  const title = document.getElementById('title');
+  function getData() {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+    .then(res => res.json())
+    .then(data => {
+      data.forEach(item => {
+        const li = document.createElement('li');
+        li.innerText = JSON.stringify(item)
+        li.onclick = function () { title.innerText = item.title }
+        document.querySelector('ul').appendChild(li);
+      })
+    });
+  }  
+  </script>
+  </body>
+</html>
