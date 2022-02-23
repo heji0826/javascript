@@ -1,1 +1,23 @@
-# javascript
+# Vanilla JS
+
+## < mission1 >
+
+1. 버튼을 누르면 [https://jsonplaceholder.typicode.com/todos](https://jsonplaceholder.typicode.com/todos) 의 리스트 렌더링
+2. 리스트에서 항목 하나 클릭 시 타이틀 출력
+
+## < mission2 >
+
+1. naming convention
+2. commit convention
+3. template literals
+4. casting
+5. inline events vs event listener
+
+## < mission3 >
+
+mission1 의 이벤트 등록 방식을 이벤트 위임 방식으로 변경
+
+## < mission4 >
+
+1. mission3 코드의 렌더링 과정 예상 및 측정
+2. 효율적인 렌더링을 위한 코드 수정
