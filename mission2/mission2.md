@@ -221,7 +221,7 @@ true == 'true' // false ( 0 == Nan, 밑의 표를 보면 ToNumber로 변환)
 null == false // false
 ```
 
-![Untitled](mission2%2072510/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/76227569/155332500-4478724b-8f89-4555-93b3-57c04ef71483.png)
 
 ## 4.2. 명시적 형 변환
 
