@@ -506,7 +506,7 @@ null == false // false
 
 ## 5.1.2. capture
 
- `addEventListener()` 는 클릭 시 이 함수가 버블링으로 작동할지 캡쳐링으로 작동할지 설정할 수 있다. 메서드를 잘 보게 되면 `addEventListener("type", 리스너(작동될 함수), 캡쳐링을 쓸지)`가 들어가게 된다. 세 번째 parameter가 true일 경우 캡쳐링을 쓴다. false일 경우 버블링을 쓰며, default는 false이다. (캡쳐링 : HTML부터 target으로, 하위요소로 내려오면서 event를 실행하는 것, 버블링: 그 반대)
+ `addEventListener()` 는 클릭 시 이 함수가 버블링으로 작동할지 캡쳐링으로 작동할지 설정할 수 있다. 메서드를 잘 보게 되면 `addEventListener("type", 리스너(작동될 함수), 캡쳐링을 쓸지)`가 들어가게 된다. 세 번째 parameter가 true일 경우 캡쳐링을 쓴다. false일 경우 버블링을 쓰며, default는 false이다. ( 캡쳐링 : HTML부터 target으로, 하위요소로 내려오면서 event를 실행하는 것, 버블링 : 그 반대 )
 
 ## 5.2. 결론
 
