@@ -3,12 +3,16 @@ const getData = document.getElementById('getData');
 getData.addEventListener('click', e => {
     fetch("https://jsonplaceholder.typicode.com/todos")
     .then(res => res.json())
-    .then(data => {
-        for(var key in data){
+    .then(json => {
+        json.forEach(item => {
             const li = document.createElement('li');
-            li.innerText = JSON.stringify(data[key])
+            li.innerText = `${item.userId}의 ${item.title}`;
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = item.completed;
+            li.appendChild(checkbox);
             document.querySelector('ul').appendChild(li);
-          }
+          })
         });
     })
 document.querySelector('ul').addEventListener('click', e =>{
