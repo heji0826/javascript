@@ -195,7 +195,19 @@ Copy to Clipboard
 
  `for` 루프를 사용하여 특정 요소 집합을 검색 할 수 있지만, `forEach` 루프는 그렇지 않다. 또한 `for` 루프는 `foreach` 루프보다 읽고 쓰기가 더 어렵다.
 
- 또한 for loop는 `continue` 나 `break` 로 중간에 건너뛰기 및 종료가 가능하지만, `forEach`는 중간에 끊을 방법이 없다. 또한 `forEach`는 return값을 받지 못한다.
+ 또한 for loop는 `continue` 나 `break` 로 중간에 건너뛰기 및 종료가 가능하지만, `forEach`는 중간에 끊을 방법이 없다.  또한 for loop는 `continue` 나 `break` 로 중간에 건너뛰기 및 종료가 가능하지만, `forEach`는 `break`이나 `continue`로 끊을 수 없다. 또한 `forEach`는 return값을 받지 못한다. `forEach`에 `break`를 걸기 위해서는 예외처리를 통해서 예외를 throw하여 강제로 루프문을 벗어나게 하는 방법을 써야 한다.
+ ```jsx
+var arr = [1,2,3,4,5,6,7,8,9,10]; 
+try{
+  arr.forEach(function(c){
+    console.log(c); 
+      if(c==3)
+        throw new Error("stop loop"); // 에러를 throw하면 강제로 루프에서 벗어나서 catch로 가게 된다. 
+  })
+}catch(e){ 
+} 
+// 결과 : 1, 2, 3
+```
 
 ### for in / for of
 
@@ -241,7 +253,7 @@ for (const value of gen()) {
 
 ## 2.1. async
 
-![Untitled](mission3%2035cfe/Untitled.png)
+![1](https://user-images.githubusercontent.com/76227569/157412277-a01e1cd0-1fe3-40bf-b3d5-0e3b38cb7a32.png)
 
   `async` 스크립트는 **DOM 렌더 과정을 방해하지 않도록 병렬로 로드**한다. 이는 브라우저가 DOM을 구성하는 동시에 백그라운드에서 스크립트를 불러올 수 있음을 의미한다. 즉 `async` 속성을 적용하면 스크립트를 불러오는 과정에서 DOM 렌더를 차단하지 않도록 보장한다.
 
@@ -263,7 +275,7 @@ for (const value of gen()) {
 
 ## 2.2. defer
 
-![Untitled](mission3%2035cfe/Untitled%201.png)
+![2](https://user-images.githubusercontent.com/76227569/157412342-b8ec116b-49ff-4dc1-9661-0cf3834a35f1.png)
 
  `defer` 스크립트는 역시 `async` 와 비슷하게 동작한다. `defer` 스크립트 역시 DOM 렌더를 방해하지 않고 병렬로 로드한다. 하지만 로드가 완료된 후 즉시 그 내용이 실행되는 `async` 스크립트와는 다르게, `defer` 스크립트는 **모든 DOM이 로드된 후에야 실행**된다.
 

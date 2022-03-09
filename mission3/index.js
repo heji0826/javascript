@@ -12,9 +12,9 @@ getData.addEventListener('click', e => {
             checkbox.checked = item.completed;
             li.appendChild(checkbox);
             document.querySelector('ul').appendChild(li);
+            li.addEventListener('click', e =>{
+                title.innerText = item.title;
+            })
           })
         });
     })
-document.querySelector('ul').addEventListener('click', e =>{
-    title.innerText = JSON.parse(e.target.innerText).title;
-})
