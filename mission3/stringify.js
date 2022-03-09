@@ -86,3 +86,5 @@ const obj = [
 			]
 	}
 ]
+
+console.log(stringify(obj))
