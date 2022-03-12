@@ -3,13 +3,13 @@ const numChs = new Set(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
 let buf = null
 let pos = 0
 
-function parse(obj) { // obj를 지워가면서 파싱하기보다는 포인터를 두고, 하나씩 읽는게 성능상 이득이다 (파일처리와 같은 방식)
+function parse(obj) { // 포인터를 두고 하나씩 읽기
   buf = obj
   pos = 0
   return json()
 }
 
-function json() { // 재귀적인 데이터 처리를 위한 래핑, ex) {a: {b: 1}}
+function json() {
   let result = null
   switch (buf[pos]) {
     case '{':
