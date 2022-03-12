@@ -9,8 +9,7 @@ getData.addEventListener('click', () => {
       const liList = json.map(item => {
         const li = document.createElement('li');
         li.innerText = `${item.userId}의 ${item.title}`;
-        li.dataset.title = item.title; // set dataset.title
-
+        li.dataset.title = item.title;
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.checked = item.completed;
@@ -22,6 +21,6 @@ getData.addEventListener('click', () => {
 })
 
 ul.addEventListener('click', e => {
-  const li = e.target.closest('li'); // find closest li Element
-  if (li) title.innerText = li.dataset.title; // if li exists, set title by dataset.title.
+  const li = e.target.closest('li');
+  if (li) title.innerText = li.dataset.title;
 })
