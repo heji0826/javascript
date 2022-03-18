@@ -16,7 +16,7 @@ num = 80
 num = 100
 ```
 
-![출처 : [https://publizm.github.io/posts/javascript/Primitive_Reference](https://publizm.github.io/posts/javascript/Primitive_Reference)](mission4%205%20ba4f5/1.png)
+![1](https://user-images.githubusercontent.com/76227569/158980648-b4e502fd-a8c5-4b92-ac46-f879f28032ad.png)
 
 출처 : [https://publizm.github.io/posts/javascript/Primitive_Reference](https://publizm.github.io/posts/javascript/Primitive_Reference)
 
