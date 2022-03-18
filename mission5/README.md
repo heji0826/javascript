@@ -258,7 +258,7 @@ element.appendChild(node);
 
 `script` 태그의 defer 속성은 페이지가 모두 로드된 후에 해당 외부 스크립트가 실행됨을 명시한다. defer 속성은 불리언(boolean) 속성으로 명시하지 않으면 false 값을 가지게 되고, 명시하면 true 값을 가지게 된다.
 
-[async vs defer](https://www.notion.so/mission3-a9dc94592d914e4a922237c585d0588d)
+[async vs defer](https://jazzy-pencil-647.notion.site/mission3-a9dc94592d914e4a922237c585d0588d)
 
 # 5. javascript module
 
