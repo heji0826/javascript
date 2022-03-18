@@ -16,7 +16,7 @@ num = 80
 num = 100
 ```
 
-![출처 : [https://publizm.github.io/posts/javascript/Primitive_Reference](https://publizm.github.io/posts/javascript/Primitive_Reference)](mission4%205%20ba4f5/1.png)
+![1](https://user-images.githubusercontent.com/76227569/158980648-b4e502fd-a8c5-4b92-ac46-f879f28032ad.png)
 
 출처 : [https://publizm.github.io/posts/javascript/Primitive_Reference](https://publizm.github.io/posts/javascript/Primitive_Reference)
 
@@ -32,7 +32,7 @@ var person = {
 };
 ```
 
-![출처 : [https://publizm.github.io/posts/javascript/Primitive_Reference](https://publizm.github.io/posts/javascript/Primitive_Reference)](mission4%205%20ba4f5/2.jpg)
+![2](https://user-images.githubusercontent.com/76227569/158981169-8baa4d27-d4a8-4df6-b4ec-97a023a9e0d9.jpg)
 
 출처 : [https://publizm.github.io/posts/javascript/Primitive_Reference](https://publizm.github.io/posts/javascript/Primitive_Reference)
 
@@ -47,7 +47,7 @@ var person = {
 var copy = person;
 ```
 
-![출처 : [https://publizm.github.io/posts/javascript/Primitive_Reference](https://publizm.github.io/posts/javascript/Primitive_Reference)](https://publizm.github.io/static/06e7e7bcae8c1794c5af8a552873311d/867c0/memory_reference.jpg)
+![3](https://user-images.githubusercontent.com/76227569/158981285-9f76bf5f-e1c6-479c-8fd0-c8c374cc7cf8.jpg)
 
 출처 : [https://publizm.github.io/posts/javascript/Primitive_Reference](https://publizm.github.io/posts/javascript/Primitive_Reference)
 
@@ -67,7 +67,7 @@ let x = {
 }
 ```
 
-![출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)](mission4%205%20ba4f5/Untitled.png)
+![rc1](https://user-images.githubusercontent.com/76227569/158981394-d2525f4b-b67d-42a0-a694-c66e3dfac079.png)
 
 출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)
 
@@ -78,7 +78,7 @@ let y = x
 x = 1
 ```
 
-![출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)](mission4%205%20ba4f5/Untitled%201.png)
+![rc2](https://user-images.githubusercontent.com/76227569/158981402-861c16f2-88e6-437e-8a62-8c7a475b3f4f.png)
 
 출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)
 
@@ -89,7 +89,7 @@ let z = y.a.b
 y = 'bumsu'
 ```
 
-![출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)](mission4%205%20ba4f5/Untitled%202.png)
+![rc3](https://user-images.githubusercontent.com/76227569/158981400-e744296c-f3d2-4f10-b9df-4e6e20d8ab2c.png)
 
 출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)
 
@@ -99,7 +99,7 @@ y = 'bumsu'
 z = null
 ```
 
-![출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)](mission4%205%20ba4f5/Untitled%203.png)
+![rc4](https://user-images.githubusercontent.com/76227569/158981399-2c483903-50eb-450f-aee1-94b3d03db13a.png)
 
 출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)
 
@@ -120,7 +120,7 @@ function f() {
 f()
 ```
 
-![출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)](mission4%205%20ba4f5/Untitled%204.png)
+![순환2](https://user-images.githubusercontent.com/76227569/158981589-51ce35f1-3e55-4cae-a28b-4613cc215e45.png)
 
 출처 : [https://velog.io/@bumsu0211/JavaScript-Garbage-Collection](https://velog.io/@bumsu0211/JavaScript-Garbage-Collection)
 
@@ -164,7 +164,7 @@ Couple();
 
 ## 2.1. EventTarget vs Element vs Node
 
-![https://media.vlpt.us/images/jangws/post/d89ef85f-88d4-46e0-bea9-20ef01c62ff2/eventTargetTree.png](https://media.vlpt.us/images/jangws/post/d89ef85f-88d4-46e0-bea9-20ef01c62ff2/eventTargetTree.png)
+![2번 비교](https://user-images.githubusercontent.com/76227569/158981758-311b3c04-6967-43e3-bd8b-c792b30380c6.png)
 
 ### 2.1.1. EventTarget
 
@@ -202,11 +202,9 @@ const content = element.innerHTML;
 element.innerHTML = htmlString;
 ```
 
-- 값은 `DOMString`이다.
 - innerHTML 값을 설정할 때, 다음 과정을 거쳐서 작동한다.
-    
-    > 지정한 값은 HTML 또는 XML(문서 타입에 따라)로 파싱되어, DocumentFragment 객체가 새 요소에 대한 새로운 노드 DOM 노드 집합을 나타냅니다.내용이 대체되는 요소가 <template> 요소 인 경우, <template> 요소의 content (en-US) 속성(attribute)은 1단계에서 작성한 새 DocumentFragment 로 대체됩니다.다른 모든 요소의 경우, 요소의 내용은 새 DocumentFragment 의 노드로 대체됩니다.
-    > 
+    - 지정한 값은 HTML 또는 XML(문서 타입에 따라)로 파싱되어, DocumentFragment 객체가 새 요소에 대한 새로운 노드 DOM 노드 집합을 나타냅니다. 내용이 대체되는 요소가 <template> 요소 인 경우, <template> 요소의 content (en-US) 속성(attribute)은 1단계에서 작성한 새 DocumentFragment 로 대체됩니다. 다른 모든 요소의 경우, 요소의 내용은 새 DocumentFragment 의 노드로 대체됩니다.
+- 값은 `DOMString`이다.
 
 ## 2.3. insertAdjacentHTML()
 
@@ -253,7 +251,7 @@ element.appendChild(node);
 
  데이터 바인딩은 단방향과 양방향으로 나뉘는데, **양방향 바인딩**의 경우, 사용자의 입력값이 곧바로 코드 상의 변수에 바인딩 될 수 있지만 **단방향 바인딩**의 경우 적절한 Event를 통해서만 코드 상 변수에 데이터 값이 담긴다.
 
-![출처 : [https://velog.io/@milkyway/데이터-바인딩-Data-Binding](https://velog.io/@milkyway/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B0%94%EC%9D%B8%EB%94%A9-Data-Binding)](mission4%205%20ba4f5/Untitled%205.png)
+![바인딩](https://user-images.githubusercontent.com/76227569/158981761-4d42ef68-41ac-4bb8-aa63-38ff2e963866.jpg)
 
 출처 : [https://velog.io/@milkyway/데이터-바인딩-Data-Binding](https://velog.io/@milkyway/%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B0%94%EC%9D%B8%EB%94%A9-Data-Binding)
 
@@ -262,8 +260,6 @@ element.appendChild(node);
 # 4. defer
 
 <script> 태그의 defer 속성은 페이지가 모두 로드된 후에 해당 외부 스크립트가 실행됨을 명시한다. defer 속성은 불리언(boolean) 속성으로 명시하지 않으면 false 값을 가지게 되고, 명시하면 true 값을 가지게 된다.
-
- [async vs defer](https://www.notion.so/mission3-a9dc94592d914e4a922237c585d0588d)
 
 # 5. javascript module
 
