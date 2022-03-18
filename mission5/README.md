@@ -206,7 +206,6 @@ element.innerHTML = htmlString;
 - innerHTML 값을 설정할 때, 다음 과정을 거쳐서 작동한다.
     
     > 지정한 값은 HTML 또는 XML(문서 타입에 따라)로 파싱되어, DocumentFragment 객체가 새 요소에 대한 새로운 노드 DOM 노드 집합을 나타냅니다.내용이 대체되는 요소가 <template> 요소 인 경우, <template> 요소의 content (en-US) 속성(attribute)은 1단계에서 작성한 새 DocumentFragment 로 대체됩니다.다른 모든 요소의 경우, 요소의 내용은 새 DocumentFragment 의 노드로 대체됩니다.
-    > 
 
 ## 2.3. insertAdjacentHTML()
 
